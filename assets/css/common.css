@@ -1,0 +1,46 @@
+:root {
+  font-family: “Noto Sans KR”, sans-serif;
+  --font-xlarge: 24px;
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-bold: 700;
+  --font-normal: 500;
+  --font-demilight: 350;
+  --font-light: 300;
+  /* colors */
+  --color-black01: #000000;
+  --color-black02: #474747;
+  --color-gray01: #858585;
+  --color-gray02: #929292;
+  --color-gray03: #B4B4B4;
+  --color-gray04: #C4C4C4;
+  --color-gray05: #DADADA;
+  --color-orange01: #FF4B3E;
+  --color-orange02: #FF5F00;
+  --color-orange03: #F58F29;
+  --color-yellow01: #FEB700;
+  --color-yellow02: #FEC229;
+  --color-yellow03: #FFDB4C;
+  --color-blue01: #0009DE;
+  --color-blue02: #0057BD;
+  --color-navy01: #235789;
+  --color-navy02: #385C7D;
+  --color-darkgray: #444444;
+  --color-mint: #00BDB2;
+  --color-brown: #BD5B00;
+  --color-sand: #C39A7D;
+  --color-pink: #DB3069;
+  --color-green: #9BC53D;
+  /* elements */
+  --nav-bg: #00C7A3;
+  --nav-icon-point: #00FF88;
+  --body-color: #EEECE5;
+  --bar-color: #DADADA;
+  --color-white: white;
+  --color-border: #DADADA;
+  /* 더 추가사항이 있을까요?*/
+}
+body {
+  background-color: var(--body-color);
+}

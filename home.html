@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script defer type="module" src="./assets/js/main.js"></script>
+  </head>
+  <body>
+    <!-- 레이아웃 -->
+    <div class="wrap home">
+      <!-- 헤더 -->
+      <header>
+        <div class="profile-image">
+          <img src="./assets/images/profile.svg" alt="프로필 사진" />
+        </div>
+        <h1 class="title">생활비</h1>
+        <div class="icons">
+          <img src="./assets/images/easypay.svg" alt="간편결제" class="icon-qr" />
+          <img src="./assets/images/search.svg" alt="검색" class="icon-search" />
+        </div>
+      </header>
+      <!-- 계좌 정보 -->
+      <section class="account-info">
+        <div class="account-number">355-673877-78773</div>
+        <div class="balance"><span class="balance-text">1,240,000</span>원</div>
+        <button class="btn-transfer">이체</button>
+        <div class="target-wrap">
+          <div class="graph-box">
+            <div class="graph graph-state">
+              <div class="state-bar"></div>
+              <div class="state-pointer"></div>
+            </div>
+            <div class="target-img">
+              <button onclick="location.href='management.html'"><img src="./assets/images/account_graph.svg" alt="지출 관리"></button>
+            </div>
+          </div>
+          <p class="target-notice">
+            <span class="remain-days">5</span>일 동안 <span class="remain-amount">210,000</span>원
+            남음
+          </p>
+        </div>
+      </section>
+      <!-- 광고 -->
+      <section class="ad">
+        <p class="ad-content">
+          지금 낮은 이자로 생활대출을 신청하세요!
+          <a href="#">Go</a>
+        </p>
+      </section>
+      <!-- 거래 내역 -->
+      <section class="transaction">
+        <div class="btn-area">
+          <button class="btn up-button"></button>
+        </div>
+        <div class="swiper mySwiper">
+          <ul class="piggy-bank swiper-wrapper">
+            <li class="pig graph swiper-slide">
+              <p class="pig-goal">
+                <span> 여행가자! </span>
+                <span> 842,200원 </span>
+              </p>
+              <div class="state-bar"></div>
+            </li>
+            <li class="pig graph swiper-slide">
+              <p class="pig-goal">
+                <span> 냉장고사기 </span>
+                <span> 142,200원 </span>
+              </p>
+              <div class="state-bar"></div>
+            </li>
+            <li class="pig-create swiper-slide">
+              <button>
+                <img src="./assets/images/addpig.svg" alt="저금통 만들기" class="icon-plus" />
+                저금통 만들기
+              </button>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 날짜 별 거래 내역 -->
+        <ul class="transaction-histories">
+          
+        </ul>
+      </section>
+    </div>
+    <!-- 네비게이션 -->
+    <nav>
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a href="#">
+            <img src="./assets/images/account.svg" alt="계좌" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./assets/images/options.svg" alt="조정" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./assets/images/chatbot.svg" alt="챗봇" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./assets/images/more.svg" alt="더보기" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

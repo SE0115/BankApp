@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script defer src="./assets/js/chart.js"></script>
+    <title>Expenditure Management</title>
+  </head>
+  <body>
+    <!-- 레이아웃 -->
+    <div class="wrap management">
+      <h1 class="title">지출 관리</h1>
+      <main>
+        <!-- 기준금액설정 -->
+        <section class="base">
+          <div class="base-amount">
+            <div class="base-setting">
+              <h2 class="sub-title">기준금액설정</h2>
+              <span class="current-base-amount"><span>2,100,000</span>원</span>
+            </div>
+            <div class="graph graph-state">
+              <div class="state-bar"></div>
+              <div class="state-pointer"></div>
+            </div>
+          </div>
+        </section>
+        <!-- 일간 리포트 -->
+        <section class="daily-report">
+          <h2 class="sub-title">일간 리포트</h2>
+          <div class="graph graph-daily">
+            <canvas id="bar-chart"></canvas>
+          </div>
+        </section>
+        <!-- 월간 지출 패턴 -->
+        <section class="monthly-pattern">
+          <h2 class="sub-title">6월 지출 패턴</h2>
+          <div class="graph graph-circle">
+            <canvas id="doughnut-chart"></canvas>
+          </div>
+          <ul class="categories">
+            <li class="category-item">
+              <div class="category-info">
+                <div><img src="./assets/images/car.svg" alt="주유비" class="category-image" /></div>
+                <span class="category-name">주유비</span>
+              </div>
+              <span class="category-cost"><span>56,000</span>원</span>
+            </li>
+            <li class="category-item">
+              <div class="category-info">
+                <div><img src="./assets/images/health.svg" alt="건강관리비" class="category-image" /></div>
+                <span class="category-name">건강관리비</span>
+              </div>
+              <span class="category-cost"><span>80,000</span>원</span>
+            </li>
+            <li class="category-item">
+              <div class="category-info">
+                <div><img src="./assets/images/eat.svg" alt="외식비" class="category-image" /></div>
+                <span class="category-name">외식비</span>
+              </div>
+              <span class="category-cost"><span>233,000</span>원</span>
+            </li>
+            <li class="category-item">
+              <div class="category-info">
+                <div><img src="./assets/images/basket.svg" alt="장보기" class="category-image" /></div>
+                <span class="category-name">장보기</span>
+              </div>
+              <span class="category-cost"><span>390,000</span>원</span>
+            </li>
+            <li class="category-item">
+              <div class="category-info">
+                <div><img src="./assets/images/shop.svg" alt="상점" class="category-image" /></div>
+                <span class="category-name">상점</span>
+              </div>
+              <span class="category-cost"><span>46,000</span>원</span>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <button class="btn-close">닫기</button>
+    </div>
+    <!-- 네비게이션 -->
+    <nav>
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a href="#">
+            <img src="./assets/images/account.svg" alt="계좌" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./assets/images/options.svg" alt="조정" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./assets/images/chatbot.svg" alt="챗봇" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <img src="./assets/images/more.svg" alt="더보기" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
