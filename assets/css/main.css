@@ -68,23 +68,18 @@ nav > ul {
 
 /* home page */
 .wrap.home {
+    background-color: var(--body-color);
     position: relative;
     height: 100%;
-    /* margin-bottom: 50px; */
     margin-top: 44px;
-    /* border: 2px solid red; */
 }
 
 /* 헤더 */
-header {
-    /* border: 1px solid black; */
-    /* position: fixed; */
-    /* top: 0; */
-    /* background-color: var(--body-color); */
-    width: 100%; /* 314 / 375 */
+.wrap.home header {
+    width: 100%;
     height: 43px;
     box-sizing: border-box;
-    padding: 0 9.554140% 0;
+    padding: 0 9.554140%;
     display: flex;
     justify-content: space-between;
     align-items: center;      
@@ -97,6 +92,9 @@ header h1 {
 }
 header .icons {
 
+}
+header .icons img {
+    cursor: pointer;
 }
 header .icons img + img {
     margin-left: 13px;
@@ -136,8 +134,6 @@ header .icons img + img {
 .graph-box .graph {
     width: 72.401433%;
     height: 6px; 
-    /* margin: 0 auto; */
-    /* border: 1px solid red; */
 }
 .graph-box .state-bar {
     width: 70%;
@@ -164,13 +160,13 @@ header .icons img + img {
     top: 14px;
     right: 26px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 /* 광고 */
 .ad {
     width: 100%;
     text-align: center;
-    /* margin-bottom: 29px; */
 }
 
 /* 지출 영역 */
@@ -315,16 +311,36 @@ header .icons img + img {
 .wrap.management {
     position: relative;
     width: 100%;
+    height: calc(100% - 112px);
     background: white;
     box-sizing: border-box;
-    padding: 33px 32px 50px 30px;
-    margin-top: 44px;
+    padding: 0 0 50px;
 }
-.wrap.management .title {
+.wrap.management header {
+    /* margin-top: 44px; */
+    padding: 77px 32px 0 30px;
+    /* box-sizing: border-box; */
+    background-color:white;
+    width: 100%;
+    height: 35px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header .title {
     font-size: 24px;
+    line-height: 35.52px;
     margin-bottom: 12px;
 }
-.wrap.management .sub-title {
+main {
+    padding: 12px 0 50px;
+    margin: 112px 32px 0 30px;
+}
+main::-webkit-scrollbar {
+    display: none;
+}
+main .sub-title {
     font-size: 18px;
     color: #444444;
     margin-bottom: 17px;
@@ -333,11 +349,12 @@ main section + section {
     margin-top: 45px;
 }
 .btn-close {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 44px;
     right: 13px;
     font-size: 14px;
     cursor: pointer;
+    z-index: 1000;
 }
 
 /* 기준 금액 설정 */
@@ -385,10 +402,28 @@ main section + section {
 
 /* 월간 지출 패턴 */
 .graph-circle {
+    position: relative;
     width: 100%;
     height: 308px;
     margin-bottom: 14px;
     background-color: #fff;
+}
+.graph-circle .center-text {
+    position:absolute;
+    font-size: 24px;
+    width: 160px;
+    height: 36px;
+    top: 50%;
+    margin-top: -18px;
+    left: 50%;
+    margin-left: -75px;
+    text-align: center;
+    line-height: 35.52px;
+    letter-spacing: 2 px;
+}
+.graph-circle .center-text span {
+    font-size: 14px;
+    margin-left: 2px;
 }
 .categories {
 
