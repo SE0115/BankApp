@@ -52,7 +52,7 @@ request.onload = function () {
         if (income === 'in') {
             li_trs_item.innerHTML = `
               <span class="item-name">${history}</span>
-              <span class="item-cost in">${price}</span>`
+              <span class="item-cost in">${addComma(price)}</span>`
         } 
         else {
             if (!monthly_details[month][day - 1]) {
@@ -64,7 +64,7 @@ request.onload = function () {
 
             li_trs_item.innerHTML = `
               <span class="item-name">${history}</span>
-              <span class="item-cost out">${price}</span>`
+              <span class="item-cost out">${addComma(price)}</span>`
         }
 
         ul_trs.prepend(li_trs_item);
@@ -75,7 +75,7 @@ request.onload = function () {
             daily_total = monthly_details[Number(date.split('-')[1])][Number(date.split('-')[2]) - 1];
             div_daily_cost.innerHTML = `
               <span class="date">${date}</span>
-              <span class="cost"><span class="cost-sum">${(daily_total) ? daily_total : 0}</span>원 지출</span>`
+              <span class="cost"><span class="cost-sum">${(daily_total) ? addComma(daily_total) : 0}</span>원 지출</span>`
             ul_trs.prepend(div_daily_cost);
 
             li_tr_daily = document.createElement('li');
@@ -89,4 +89,8 @@ request.onload = function () {
     }
 }
 
+function addComma(num) {
+    var regexp = /\B(?=(\d{3})+(?!\d))/g;
+    return num.toString().replace(regexp, ',');
+}
 //  */
