@@ -1,13 +1,13 @@
-const category_total = {health: 852000, eatout: 617800, mart: 1183669, shopping: 5304610, oiling: 180000};
+const category_total = {oiling: 180000, health: 852000, eatout: 617800, mart: 1183669, shopping: 5304610};
 const monthly_details = [62000, 61400, 201500, 111500, 57000, 167500, 254330, 22800, undefined, 82300, undefined, 70600, 879300, 97000, 25200, 9000, 59000, 77410, 339000, 157580, 90000, 3780800, 387710, 70650, 43600, 96900, undefined, undefined, 68000, 124999];
-
+const cate_data = Object.values(category_total);
 // 도넛 차트
 new Chart(document.getElementById("doughnut-chart"), {
     type: 'doughnut',
     data: {
         labels: ["주유비", "건강관리비", "외식비", "장보기", "상점"],
         datasets: [{
-            data: [category_total['oiling'], category_total['health'], category_total['eatout'], category_total['mart'], category_total['shopping']],
+            data: cate_data,
             backgroundColor: ["#db3069", "#f58f29","#ff4b3e","#235789","#9bc53d"],
             borderWidth: 0
         }]
@@ -20,6 +20,12 @@ new Chart(document.getElementById("doughnut-chart"), {
       cutoutPercentage: 75, // 차트 굵기 조절
     }
 });
+
+const categoryEls = document.querySelectorAll('.category-cost');
+for(let i=0; i<categoryEls.length; i++){
+  categoryEls[i].innerHTML=`<span>${addComma(cate_data[i])}</span>원`
+}
+
 
 const centerText = document.createElement('span');
 centerText.className = 'center-text';

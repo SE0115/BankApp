@@ -23,7 +23,7 @@ request.onload = function () {
     let classify, date, history, income, price;
     let daily_total; // 하루 총 지출 금액
     let category_total = {
-        'health': 0, 'eatout': 0, 'mart': 0, 'shopping': 0, 'oiling': 0
+        'oiling': 0, 'health': 0, 'eatout': 0, 'mart': 0, 'shopping': 0 
     }; // 카테고리별 지출 금액
     let monthly_details = {
         1: [], 2: [], 3: [], 4: [], 5: [], 6: [],
@@ -88,7 +88,6 @@ request.onload = function () {
         }
     }
 }
-
 function addComma(num) {
     var regexp = /\B(?=(\d{3})+(?!\d))/g;
     return num.toString().replace(regexp, ',');
